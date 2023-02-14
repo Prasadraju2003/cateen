@@ -1,0 +1,11 @@
+{% extends "kiet/layout.html" %} {% block body %}
+<h1>MY FOOD</h1>
+<ul>
+  {% for i,j,k in data %}
+  <li>{{i}} - {{j}} x {{k}}</li>
+  {% endfor %}
+  <li><h5 style="color: blue">Total - {{ total }}</h5></li>
+</ul>
+<ul>
+<a href="{% url 'add' %}"> ADD MORE ITEMS</a>
+{% endblock %}
